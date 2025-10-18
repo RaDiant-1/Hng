@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card | Frontend Wizards</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #222;
+    }
+
+    article[data-testid="test-profile-card"] {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    header h2 {
+      font-size: 1.8rem;
+      color: #1d3557;
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+    }
+
+    img[data-testid="test-user-avatar"] {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #457b9d;
+    }
+
+    p[data-testid="test-user-bio"] {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    p[data-testid="test-user-time"] {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    nav[data-testid="test-user-social-links"] ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1d3557;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #e63946;
+      outline: none;
+    }
+
+    section {
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1d3557;
+    }
+
+    section ul {
+      list-style: disc inside;
+    }
+
+    @media (min-width: 700px) {
+      article[data-testid="test-profile-card"] {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      figure {
+        flex: 1;
+      }
+
+      .card-info {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      p[data-testid="test-user-bio"],
+      p[data-testid="test-user-time"],
+      nav[data-testid="test-user-social-links"] ul {
+        text-align: left;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article data-testid="test-profile-card" aria-label="User Profile Card">
+    <figure>
+      <img 
+        src="https://via.placeholder.com/150" 
+        alt="Profile picture of Uchenna Peace" 
+        data-testid="test-user-avatar">
+    </figure>
+
+    <div class="card-info">
+      <header>
+        <h2 data-testid="test-user-name">Onoh Uchenna Peace</h2>
+      </header>
+
+      <p data-testid="test-user-bio">
+        A determined and brilliant lady with a nerdy sense of humor, curious about AI software development.
+      </p>
+
+      <p data-testid="test-user-time" id="user-time"></p>
+
+      <nav data-testid="test-user-social-links" aria-label="User social links">
+        <ul>
+          <li><a data-testid="test-user-social-twitter" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a data-testid="test-user-social-github" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a data-testid="test-user-social-linkedin" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <section data-testid="test-user-hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Singing</li>
+          <li>Learning</li>
+          <li>Listening to music</li>
+        </ul>
+      </section>
+
+      <section data-testid="test-user-dislikes">
+        <h3>Dislikes</h3>
+        <ul>
+          <li>Slow internet</li>
+          <li>Noise</li>
+          <li>Disorganization</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <script>
+    // Set the current time in milliseconds
+    document.getElementById('user-time').textContent = Date.now();
+  </script>
+</body>
+  </html>
