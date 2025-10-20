@@ -4,200 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uchenna Onoh | Profile Card</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #f1f5f9, #dbe2ef);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      color: #1d3557;
-      padding: 20px;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-      text-align: center;
-      width: 100%;
-      max-width: 400px;
-      transition: all 0.4s ease;
-      animation: fadeIn 1s ease forwards;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .avatar-container {
-      margin-bottom: 15px;
-    }
-
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #457b9d;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover .avatar {
-      border-color: #e63946;
-      transform: scale(1.05);
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      margin: 0.5rem 0;
-      font-weight: 600;
-    }
-
-    .role {
-      font-size: 0.95rem;
-      color: #457b9d;
-      margin-bottom: 1.3rem;
-      font-weight: 500;
-    }
-
-    .bio {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-
-    .time {
-      font-size: 0.75rem;
-      color: #fff;
-      background: linear-gradient(135deg, #457b9d, #1d3557);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      margin-bottom: 1.5rem;
-      font-family: monospace;
-      display: inline-block;
-      box-shadow: 0 2px 8px rgba(69, 123, 157, 0.3);
-      letter-spacing: 0.5px;
-    }
-
-    .links {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .links a {
-      text-decoration: none;
-      color: #e63946;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      padding: 0.4rem 0.7rem;
-      border-radius: 8px;
-    }
-
-    .links a:hover {
-      background-color: #e63946;
-      color: #fff;
-    }
-
-    .hobbies, .dislikes {
-      text-align: left;
-      margin: 1rem 0;
-      padding: 1rem;
-      background: #f8f9fa;
-      border-radius: 12px;
-    }
-
-    .hobbies h3, .dislikes h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: #457b9d;
-    }
-
-    .hobbies ul, .dislikes ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .hobbies li, .dislikes li {
-      font-size: 0.85rem;
-      color: #555;
-      padding: 0.3rem 0;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-
-    .hobbies li:before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #457b9d;
-      font-weight: bold;
-    }
-
-    .dislikes li:before {
-      content: "✗";
-      position: absolute;
-      left: 0;
-      color: #e63946;
-      font-weight: bold;
-    }
-
-    footer {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 1.5rem;
-    }
-
-    @media (max-width: 400px) {
-      .card {
-        padding: 2rem;
-      }
-
-      h1 {
-        font-size: 1.3rem;
-      }
-
-      .avatar {
-        width: 110px;
-        height: 110px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <article class="card" data-testid="test-profile-card">
     <figure class="avatar-container">
       <img 
-        src="https://raw.githubusercontent.com/RaDiant-1/Hng/main/IMG_20250101_161702~2.jpg" 
+        src="https://raw.githubusercontent.com/RaDiant-1/Hng/main/IMG_20250101_161702~2.jpg"
         alt="Uchenna Onoh" 
         class="avatar"
         data-testid="test-user-avatar">
@@ -216,9 +29,9 @@
 
     <nav>
       <ul class="links" data-testid="test-user-social-links">
-        <li><a href="https://github.com/RaDiant-1" target="_blank" data-testid="test-user-social-github">GitHub</a></li>
-        <li><a href="https://x.com/Onoh_Up" target="_blank" data-testid="test-user-social-twitter">X</a></li>
-        <li><a href="https://www.linkedin.com/in/uchenna-onoh-590293254/" target="_blank" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+        <li><a href="https://github.com/RaDiant-1" target="_blank">GitHub</a></li>
+        <li><a href="https://x.com/Onoh_Up" target="_blank">X</a></li>
+        <li><a href="https://www.linkedin.com/in/uchenna-onoh-590293254/" target="_blank">LinkedIn</a></li>
       </ul>
     </nav>
 
@@ -226,7 +39,7 @@
       <h3>Hobbies</h3>
       <ul data-testid="test-user-hobbies">
         <li>Building and learning</li>
-        <li>Watching videos & tech blogs</li>
+        <li>Watching tech videos & blogs</li>
       </ul>
     </div>
 
@@ -239,32 +52,27 @@
     </div>
 
     <footer>
-      © 2025 Uchenna Onoh
+      <p>© 2025 Uchenna Onoh</p>
+      <p>
+        <a href="about.html">About Me</a> | 
+        <a href="contact.html">Contact</a>
+      </p>
     </footer>
   </article>
 
   <script>
-    // Update current time in milliseconds
     function updateTime() {
       const timeElement = document.getElementById('currentTime');
       const now = new Date();
       const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        second: '2-digit'
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', second: '2-digit'
       };
-      const formattedTime = now.toLocaleDateString('en-US', options);
-      timeElement.innerHTML = `<strong>⏰</strong> ${formattedTime}`;
+      timeElement.innerHTML = `<strong>⏰</strong> ${now.toLocaleDateString('en-US', options)}`;
       timeElement.setAttribute('data-time-ms', Date.now());
     }
-    
-    // Update immediately and every second
     updateTime();
     setInterval(updateTime, 1000);
   </script>
 </body>
-  </html>
+</html>
